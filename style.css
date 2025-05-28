@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+html, body {
+  width: 1005;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Cairo', sans-serif;
+  background-color: #000814; /* dark blue background */
+  color: #e0e0e0;
+  text-align: left;
+  line-height: 1.6;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+body.light-mode {
+  background-color: #f0f4f8;
+  color: #222;
+}
+body.light-mode main {
+  background-color: #f0f4f8;
+}
+
+body.light-mode section {
+  background-color: transparent;
+}
+
+header {
+  background-color: #001f3f; /* dark blue */
+  padding: 20px;
+  text-align: center;
+  color: #e0e0e0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+body.light-mode header {
+  background-color: #cce1f8;
+  color: #001f3f;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: #e0e0e0;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  background-color: #00509e;
+  color: #fff;
+}
+
+body.light-mode nav ul li a {
+  color: #001f3f;
+}
+
+body.light-mode nav ul li a:hover,
+body.light-mode nav ul li a:focus {
+  background-color: #003366;
+  color: #fff;
+}
+
+.toggle-button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #001f3f;
+  border: none;
+  border-radius: 6px;
+  color: #e0e0e0;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-button:hover {
+  background-color: #003366;
+}
+
+body.light-mode .toggle-button {
+  background-color: #cce1f8;
+  color: #001f3f;
+}
+
+body.light-mode .toggle-button:hover {
+  background-color: #a3bde6;
+}
+
+main {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+section {
+  margin-bottom: 50px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.project-card {
+  background-color: rgba(0, 31, 63, 0.7);
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s ease;
+}
+.project-card:hover {
+  background-color: rgba(0, 31, 63, 0.9);
+}
+
+body.light-mode .project-card {
+  background-color: #dbe9f4;
+  color: #001f3f;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+body.light-mode .project-card:hover {
+  background-color: #c4d9f7;
+}
+
+.project-card h3 {
+  margin-top: 0;
+  color: #00b4d8;
+}
+
+body.light-mode .project-card h3 {
+  color: #0077b6;
+}
+
+.project-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+h1, h2 {
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #00b4d8;
+}
+
+body.light-mode h1, body.light-mode h2 {
+  color: #0077b6;
+}
+
+ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+a {
+  color: #00b4d8;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: #0096c7;
+}
+
+.button {
+  background-color: #001f3f;
+  color: #fff !important;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.button:hover {
+  background-color: #003366;
+}
+
+body.light-mode .button {
+  background-color: #cce1f8;
+  color: #001f3f !important;
+}
+
+body.light-mode .button:hover {
+  background-color: #a3bde6;
+}
+
+form {
+  max-width: 400px;
+  margin-top: 20px;
+}
+
+/* Removed input and textarea styling since no inputs */
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Fade in page */
+body {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
+body.loaded {
+  opacity: 1;
+}
+
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  main {
+    padding: 0 15px;
+  }
+
+  .toggle-button {
+    width: 100%;
+    padding: 12px 0;
+  }
+}
+.profile-pic-wrapper {
+  float: left;
+  margin: 20px 25px 20px 0;
+  width: 190px;               /* total size including border */
+  height: 190px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #00b4d8, #0077b6);
+  padding: 5px;               /* border thickness */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  transition: box-shadow 0.4s ease;
+  cursor: pointer;
+  box-sizing: border-box;    /* include padding in width/height */
+}
+
+.profile-pic-wrapper:hover {
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+}
+
+.profile-pic {
+  width: 100%;               /* fill the wrapper exactly */
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+#contact {
+  background-color: transparent;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #00b4d8;
+}
+
+body.light-mode #contact h2 {
+  color: #0077b6;
+}
+
+#contact p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: inherit;
+}
+
+.contact-info {
+  font-size: 1rem;
+}
+
+.contact-info a {
+  color: #00b4d8;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-info a:hover {
+  color: #0096c7;
+  text-decoration: underline;
+}
+
+.social-links {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.social-links a {
+  font-size: 1.8rem;
+  color: #00b4d8;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #0096c7;
+}
+.social-links a.fa-linkedin {
+  color: #00b4d8; /* Same as other icons */
+}
+body.light-mode .social-links a.fa-linkedin {
+  color: #0077b6;
+}
+.social-links a.fa-linkedin:hover {
+  color: #0096c7;
+}
+body.light-mode .contact-info a,
+body.light-mode .social-links a {
+  color: #0077b6;
+}
+
+body.light-mode .contact-info a:hover,
+body.light-mode .social-links a:hover {
+  color: #023e8a;
+}
+/* System preference detection */
+@media (prefers-color-scheme: light) {
+  body:not(.light-mode):not(.loaded) {
+    background-color: #f0f4f8;
+    color: #222;
+  }
+}
